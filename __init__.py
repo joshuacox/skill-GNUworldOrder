@@ -23,9 +23,11 @@ from mycroft.skills.core import MycroftSkill, intent_handler
 from mycroft.audio import wait_while_speaking
 from mycroft.util.log import LOG
 try:
-    from mycroft.skills.audioservice import AudioService
+#    from mycroft.skills.audioservice import AudioService
+    from mycroft.util import play_ogg
+    AudioService = None
 except:
-    from mycroft.util import play_mp3
+    from mycroft.util import play_ogg
     AudioService = None
 
 
@@ -80,7 +82,7 @@ class GNUworldOrderSkill(MycroftSkill):
                 self.audioservice.play(url, message.data['utterance'])
             else:  # othervice use normal mp3 playback
                 LOG.info('playmp3')
-                self.process = play_mp3(url)
+                self.process = play_ogg(url)
 
         except Exception as e:
             LOG.error("Error: {0}".format(e))
@@ -110,7 +112,7 @@ class GNUworldOrderSkill(MycroftSkill):
                 self.audioservice.play(url, message.data['utterance'])
             else:  # othervice use normal mp3 playback
                 LOG.info('playmp3')
-                self.process = play_mp3(url)
+                self.process = play_ogg(url)
 
         except Exception as e:
             LOG.error("Error: {0}".format(e))
@@ -140,7 +142,7 @@ class GNUworldOrderSkill(MycroftSkill):
                 self.audioservice.play(url, message.data['utterance'])
             else:  # othervice use normal mp3 playback
                 LOG.info('playmp3')
-                self.process = play_mp3(url)
+                self.process = play_ogg(url)
 
         except Exception as e:
             LOG.error("Error: {0}".format(e))
@@ -170,7 +172,7 @@ class GNUworldOrderSkill(MycroftSkill):
                 self.audioservice.play(url, message.data['utterance'])
             else:  # othervice use normal mp3 playback
                 LOG.info('playmp3')
-                self.process = play_mp3(url)
+                self.process = play_ogg(url)
 
         except Exception as e:
             LOG.error("Error: {0}".format(e))
@@ -200,7 +202,7 @@ class GNUworldOrderSkill(MycroftSkill):
                 self.audioservice.play(url, message.data['utterance'])
             else:  # othervice use normal mp3 playback
                 LOG.info('playmp3')
-                self.process = play_mp3(url)
+                self.process = play_ogg(url)
 
         except Exception as e:
             LOG.error("Error: {0}".format(e))
@@ -230,7 +232,7 @@ class GNUworldOrderSkill(MycroftSkill):
                 self.audioservice.play(url, message.data['utterance'])
             else:  # othervice use normal mp3 playback
                 LOG.info('playmp3')
-                self.process = play_mp3(url)
+                self.process = play_ogg(url)
 
         except Exception as e:
             LOG.error("Error: {0}".format(e))
@@ -260,7 +262,7 @@ class GNUworldOrderSkill(MycroftSkill):
                 self.audioservice.play(url, message.data['utterance'])
             else:  # othervice use normal mp3 playback
                 LOG.info('playmp3')
-                self.process = play_mp3(url)
+                self.process = play_ogg(url)
 
         except Exception as e:
             LOG.error("Error: {0}".format(e))
@@ -290,7 +292,7 @@ class GNUworldOrderSkill(MycroftSkill):
                 self.audioservice.play(url, message.data['utterance'])
             else:  # othervice use normal mp3 playback
                 LOG.info('playmp3')
-                self.process = play_mp3(url)
+                self.process = play_ogg(url)
 
         except Exception as e:
             LOG.error("Error: {0}".format(e))
@@ -320,7 +322,7 @@ class GNUworldOrderSkill(MycroftSkill):
                 self.audioservice.play(url, message.data['utterance'])
             else:  # othervice use normal mp3 playback
                 LOG.info('playmp3')
-                self.process = play_mp3(url)
+                self.process = play_ogg(url)
 
         except Exception as e:
             LOG.error("Error: {0}".format(e))
@@ -350,7 +352,7 @@ class GNUworldOrderSkill(MycroftSkill):
                 self.audioservice.play(url, message.data['utterance'])
             else:  # othervice use normal mp3 playback
                 LOG.info('playmp3')
-                self.process = play_mp3(url)
+                self.process = play_ogg(url)
 
         except Exception as e:
             LOG.error("Error: {0}".format(e))
@@ -380,7 +382,7 @@ class GNUworldOrderSkill(MycroftSkill):
                 self.audioservice.play(url, message.data['utterance'])
             else:  # othervice use normal mp3 playback
                 LOG.info('playmp3')
-                self.process = play_mp3(url)
+                self.process = play_ogg(url)
 
         except Exception as e:
             LOG.error("Error: {0}".format(e))
@@ -410,7 +412,7 @@ class GNUworldOrderSkill(MycroftSkill):
                 self.audioservice.play(url, message.data['utterance'])
             else:  # othervice use normal mp3 playback
                 LOG.info('playmp3')
-                self.process = play_mp3(url)
+                self.process = play_ogg(url)
 
         except Exception as e:
             LOG.error("Error: {0}".format(e))
@@ -440,7 +442,7 @@ class GNUworldOrderSkill(MycroftSkill):
                 self.audioservice.play(url, message.data['utterance'])
             else:  # othervice use normal mp3 playback
                 LOG.info('playmp3')
-                self.process = play_mp3(url)
+                self.process = play_ogg(url)
 
         except Exception as e:
             LOG.error("Error: {0}".format(e))
@@ -470,7 +472,7 @@ class GNUworldOrderSkill(MycroftSkill):
                 self.audioservice.play(url, message.data['utterance'])
             else:  # othervice use normal mp3 playback
                 LOG.info('playmp3')
-                self.process = play_mp3(url)
+                self.process = play_ogg(url)
 
         except Exception as e:
             LOG.error("Error: {0}".format(e))
@@ -500,7 +502,7 @@ class GNUworldOrderSkill(MycroftSkill):
                 self.audioservice.play(url, message.data['utterance'])
             else:  # othervice use normal mp3 playback
                 LOG.info('playmp3')
-                self.process = play_mp3(url)
+                self.process = play_ogg(url)
 
         except Exception as e:
             LOG.error("Error: {0}".format(e))
@@ -530,7 +532,7 @@ class GNUworldOrderSkill(MycroftSkill):
                 self.audioservice.play(url, message.data['utterance'])
             else:  # othervice use normal mp3 playback
                 LOG.info('playmp3')
-                self.process = play_mp3(url)
+                self.process = play_ogg(url)
 
         except Exception as e:
             LOG.error("Error: {0}".format(e))
@@ -570,7 +572,7 @@ class GNUworldOrderSkill(MycroftSkill):
                 self.audioservice.play(url, message.data['utterance'])
             else:  # othervice use normal mp3 playback
                 LOG.info('playmp3')
-                self.process = play_mp3(url)
+                self.process = play_ogg(url)
 
         except Exception as e:
             LOG.error("Error: {0}".format(e))
@@ -600,7 +602,7 @@ class GNUworldOrderSkill(MycroftSkill):
                 self.audioservice.play(url, message.data['utterance'])
             else:  # othervice use normal mp3 playback
                 LOG.info('playmp3')
-                self.process = play_mp3(url)
+                self.process = play_ogg(url)
 
         except Exception as e:
             LOG.error("Error: {0}".format(e))
